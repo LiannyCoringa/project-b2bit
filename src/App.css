@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(247, 244, 244);
   display: flex;
   justify-content: center;
 }
@@ -14,10 +14,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #02274F;
+  border: none;
   border-radius: 18px;
   width: 100%;
   padding: 15px;
+  background-color: white;
 }
 
 .title {
