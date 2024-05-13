@@ -2,3 +2,62 @@
   padding: 0px;
   margin: 0px;
 }
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #02274F;
+  border-radius: 18px;
+  width: 100%;
+  padding: 15px;
+}
+
+.title {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #02274F;
+  font-size: 150px;
+  margin-top: 20px;
+}
+
+#span {
+  color: #FDCF00
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  width: 385px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border-color: #f1f1f1;
+  padding: 18px;
+  background-color: #f1f1f1;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form button {
+  background-color: #02274F;
+  color: white;
+  padding: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
