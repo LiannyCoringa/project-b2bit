@@ -45,8 +45,8 @@ form input {
   margin-top: 10px;
   margin-bottom: 25px;
   border-radius: 10px;
-  border-color: #f1f1f1;
-  padding: 18px;
+  border: none;
+  padding: 20px;
   background-color: #f1f1f1;
 }
 
