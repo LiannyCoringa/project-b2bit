@@ -84,3 +84,25 @@ header button {
   padding: 10px;
   border-radius: 6.33px;
 }
+
+main {
+  background-color: #F1F5F9;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 18px;
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+}
+
+.image-profile {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}

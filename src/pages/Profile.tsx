@@ -7,7 +7,7 @@ function Profile() {
       <Header />
       <main>
         <div className="card">
-          <div>
+          <div className="image-profile">
             <span>Profile picture</span>
             <img src="" alt="rosto de um usuário" />
           </div>
