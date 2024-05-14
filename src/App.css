@@ -96,7 +96,8 @@ main {
   align-items: center;
   border: none;
   border-radius: 18px;
-  width: 100%;
+  width: 356px;
+  height: 315px;
   padding: 15px;
   background-color: white;
 }
@@ -105,4 +106,15 @@ main {
   display: flex;
   flex-direction: column;
   margin: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.info-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
 }

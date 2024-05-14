@@ -11,15 +11,15 @@ function Profile() {
             <span>Profile picture</span>
             <img src="" alt="rosto de um usuário" />
           </div>
-          <div>
+          <div className="info-profile">
             <p>
               Your
-              <span>Name</span>
+              <span className="bold"> Name</span>
             </p>
             <p>Nome da pessoa</p>
             <p>
               Your
-              <span>E-mail</span>
+              <span className="bold"> E-mail</span>
             </p>
             <p>Email da pessoa</p>
           </div>
