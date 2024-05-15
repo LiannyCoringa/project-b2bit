@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Header from '../components/Header';
 import { ProfileType } from '../types';
 
@@ -14,15 +15,15 @@ function Profile() {
       navigate('/');
     }
     const fetchFunction = async () => {
-      const response = await fetch('https://api.homologation.cliqdrive.com.br/auth/profile/', {
-        method: 'GET',
+      const { data } = await axios({
+        method: 'get',
+        url: 'https://api.homologation.cliqdrive.com.br/auth/profile/',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json;version=v1_web',
           Authorization: `Bearer ${token}`,
         },
       });
-      const data = await response.json();
       setProfile(data);
     };
     fetchFunction();

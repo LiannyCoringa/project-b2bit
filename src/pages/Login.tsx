@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Login() {
   const [valuesInput, setValuesInput] = useState({ email: '', password: '' });
@@ -8,18 +9,18 @@ function Login() {
   const navigate = useNavigate();
 
   const fetchFunction = async () => {
-    const response = await fetch('https://api.homologation.cliqdrive.com.br/auth/login/', {
-      method: 'POST',
+    const { data } = await axios({
+      method: 'post',
+      url: 'https://api.homologation.cliqdrive.com.br/auth/login/',
+      data: {
+        email: valuesInput.email,
+        password: valuesInput.password,
+      },
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json;version=v1_web',
       },
-      body: JSON.stringify({
-        email: valuesInput.email,
-        password: valuesInput.password,
-      }),
     });
-    const data = await response.json();
     return data;
   };
 
@@ -39,8 +40,6 @@ function Login() {
 
   useEffect(() => {
     validate();
-    console.log('valuesInput', valuesInput);
-    console.log('errors', errors);
   }, [valuesInput]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
