@@ -1,7 +1,11 @@
 function Header() {
+  const handleClick = () => {
+    localStorage.removeItem('token');
+    window.location.href = '/';
+  };
   return (
     <header>
-      <button>Logout</button>
+      <button onClick={ handleClick }>Logout</button>
     </header>
   );
 }
