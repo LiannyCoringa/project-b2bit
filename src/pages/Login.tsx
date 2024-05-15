@@ -75,7 +75,7 @@ function Login() {
           onChange={ handleChange }
           value={ valuesInput.email }
           id="email"
-          placeholder="Username"
+          placeholder="@gmail.com"
         />
         <span className="error">{errors.email}</span>
         <label htmlFor="password">Password</label>
@@ -85,7 +85,7 @@ function Login() {
           onChange={ handleChange }
           value={ valuesInput.password }
           id="password"
-          placeholder="Password"
+          placeholder="***************"
         />
         <span
           className="error"
