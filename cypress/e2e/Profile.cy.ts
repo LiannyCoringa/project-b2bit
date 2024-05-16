@@ -29,4 +29,16 @@ describe('template spec', () => {
     cy.visit('http://localhost:5173/profile')
     cy.contains('Sing In').should('be.visible')
   })
+  it('Testa se a API é chamada ao entrar na página Profile', () => {
+    cy.visit('http://localhost:5173/')
+    cy.get('input[placeholder="@gmail.com"]').type('cliente@youdrive.com')
+    cy.get('input[placeholder="***************"]').type('password')
+    cy.get('button').click()
+    cy.wait(2000)
+    cy.intercept('GET', 'https://api.homologation.cliqdrive.com.br/auth/profile/').as('profile')
+    cy.visit('http://localhost:5173/profile')
+    cy.wait('@profile').then((interception) => {
+      expect(interception.response.statusCode).to.eq(200)
+    })
+  })
 })
