@@ -37,7 +37,7 @@ function Profile() {
           <div className="image-profile">
             <span>Profile picture</span>
             <img
-              src="https://cognuro-app-assets.s3.amazonaws.com/media/images/IMG_4452_low_5Vh2hYj.jpg"
+              src={ profile?.avatar ? profile.avatar.image_low_url : 'https://cognuro-app-assets.s3.amazonaws.com/media/images/IMG_4452_low_5Vh2hYj.jpg' }
               alt="rosto de um usuário"
             />
           </div>
