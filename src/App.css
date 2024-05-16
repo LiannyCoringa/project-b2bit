@@ -22,14 +22,8 @@ body {
   background-color: white;
 }
 
-.title {
-  font-family: "Gabarito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  color: #02274F;
-  font-size: 150px;
-  margin-top: 20px;
+.login-container img {
+  margin: 20px;
 }
 
 #span {

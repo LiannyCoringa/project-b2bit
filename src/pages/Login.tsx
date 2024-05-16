@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import image from '../images/B2BitLogo.png';
 
 function Login() {
   const [valuesInput, setValuesInput] = useState({ email: '', password: '' });
@@ -62,10 +63,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h1 className="title">
-        b2b
-        <span id="span">It</span>
-      </h1>
+      <img src={ image } alt="logo b2bit" data-testid="logo" />
       <form onSubmit={ handleSubmit }>
         <label htmlFor="email">E-mail</label>
         <input

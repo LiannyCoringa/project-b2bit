@@ -3,24 +3,16 @@ import { vi } from 'vitest';
 import { renderWithRouter } from './utils/renderWithRouter';
 
 import App from '../App';
-import mock from './mock';
-
-beforeEach(() => {
-  global.fetch = vi.fn().mockResolvedValue({
-    json: async () => (mock),
-  });
-});
-
-afterEach(() => {
-  vi.clearAllMocks();
-  localStorage.clear();
-});
 
 describe('Testa a página Profile', async () => {
+  afterEach(() => {
+    vi.clearAllMocks();
+    localStorage.clear();
+  });
   it('Testa se entrar direto na rota /profile sem token volta para a página principal', async () => {
     renderWithRouter(<App />, { route: '/profile' });
 
-    expect(screen.getByText(/b2b/i)).toBeInTheDocument();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
   });
   it('Testa os textos da página profile', async () => {
     const { user } = renderWithRouter(<App />, { route: '/' });
