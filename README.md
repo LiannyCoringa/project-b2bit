@@ -7,5 +7,6 @@ Para rodar a aplicação:
 * clone este repositório;
 * rode no terminal o comando 'npm install';
 * após a instalação das dependências terminar, rode o comando 'npm run dev'.
+* Deploy realizado no link: https://project-b2bit.vercel.app/
 
 Caso queira testar a aplicação, é possivel rodar os comandos 'npm run test'. 
