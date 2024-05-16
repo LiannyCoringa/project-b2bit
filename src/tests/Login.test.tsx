@@ -1,9 +1,14 @@
 import { screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import { renderWithRouter } from './utils/renderWithRouter';
 
 import App from '../App';
 
 describe('Testa a página de Login', () => {
+  afterEach(() => {
+    vi.clearAllMocks();
+    localStorage.clear();
+  });
   it('Testa os textos da página de Login', async () => {
     renderWithRouter(<App />);
 
