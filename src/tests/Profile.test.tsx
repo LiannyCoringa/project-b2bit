@@ -12,7 +12,7 @@ describe('Testa a página Profile', async () => {
   it('Testa se entrar direto na rota /profile sem token volta para a página principal', async () => {
     renderWithRouter(<App />, { route: '/profile' });
 
-    expect(screen.getByText(/b2b/i)).toBeInTheDocument();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
   });
   it('Testa os textos da página profile', async () => {
     const { user } = renderWithRouter(<App />, { route: '/' });

@@ -12,7 +12,7 @@ describe('Testa a página de Login', () => {
   it('Testa os textos da página de Login', async () => {
     renderWithRouter(<App />);
 
-    expect(screen.getByText(/b2b/i)).toBeInTheDocument();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
     expect(screen.getByText(/E-mail/i)).toBeInTheDocument();
     expect(screen.getByText(/Password/i)).toBeInTheDocument();
     expect(screen.getByText(/Sing In/i)).toBeInTheDocument();

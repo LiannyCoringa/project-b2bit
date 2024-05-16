@@ -3,7 +3,7 @@
 describe('template spec', () => {
   it('Testa os textos da página de login', () => {
     cy.visit('http://localhost:5173/')
-    cy.contains('b2b').should('be.visible')
+    cy.get('[data-testid="logo"]').should('be.visible')
     cy.contains('E-mail').should('be.visible')
     cy.contains('Password').should('be.visible')
     cy.contains('Sing In').should('be.visible')
