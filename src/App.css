@@ -154,6 +154,10 @@ main {
   font-weight: lighter;
 }
 
+.border-name:hover {
+  cursor: default;
+}
+
 .error {
   color: red;
   font-weight: bold;
