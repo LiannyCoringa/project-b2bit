@@ -90,7 +90,7 @@ function Login() {
           {errors.password}
         </span>
         <button type="submit" disabled={ disabled }>
-          Sing In
+          Sign In
         </button>
       </form>
     </div>
