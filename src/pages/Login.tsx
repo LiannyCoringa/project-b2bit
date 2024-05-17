@@ -49,11 +49,11 @@ function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const data = await fetchFunction();
-    if (data.tokens) {
+    try {
+      const data = await fetchFunction();
       localStorage.setItem('token', data.tokens.access);
       navigate('/profile');
-    } else {
+    } catch (error) {
       setErrors({ ...errors, password: 'Invalid Email or Password' });
       setTimeout(() => {
         setErrors({ ...errors, password: '' });
@@ -64,7 +64,7 @@ function Login() {
   return (
     <div className="login-container">
       <img src={ image } alt="logo b2bit" data-testid="logo" />
-      <form onSubmit={ handleSubmit }>
+      <form onSubmit={ (e) => handleSubmit(e) }>
         <label htmlFor="email">E-mail</label>
         <input
           type="email"
