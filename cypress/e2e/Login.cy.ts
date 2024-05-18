@@ -6,7 +6,7 @@ describe('template spec', () => {
     cy.get('[data-testid="logo"]').should('be.visible')
     cy.contains('E-mail').should('be.visible')
     cy.contains('Password').should('be.visible')
-    cy.contains('Sing In').should('be.visible')
+    cy.contains('Sign In').should('be.visible')
   })
   it('Testa se o usuário é redirecionado para a página de Profile', () => {
     cy.visit('http://localhost:5173/')
