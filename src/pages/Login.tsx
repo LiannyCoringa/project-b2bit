@@ -27,13 +27,14 @@ function Login() {
 
   const validate = () => {
     if (valuesInput.email === '') {
-      setErrors({ ...errors, email: 'Required' });
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(valuesInput.email)
-    ) {
-      setErrors({ ...errors, email: 'Invalid Email' });
-    } else {
+      setErrors({ ...errors, email: 'Required email' });
+      setDisabled(true);
+    } else if (valuesInput.password === '') {
       setErrors({ ...errors, email: '' });
+      setErrors({ ...errors, password: 'Required password' });
+      setDisabled(true);
+    } else {
+      setErrors({ email: '', password: '' });
       setDisabled(false);
     }
     return errors;
@@ -49,15 +50,19 @@ function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const data = await fetchFunction();
-      localStorage.setItem('token', data.tokens.access);
-      navigate('/profile');
-    } catch (error) {
-      setErrors({ ...errors, password: 'Invalid Email or Password' });
-      setTimeout(() => {
-        setErrors({ ...errors, password: '' });
-      }, 5000);
+    if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(valuesInput.email)) {
+      try {
+        const data = await fetchFunction();
+        localStorage.setItem('token', data.tokens.access);
+        navigate('/profile');
+      } catch (error) {
+        setErrors({ ...errors, password: 'Invalid Email or Password' });
+        setTimeout(() => {
+          setErrors({ ...errors, password: '' });
+        }, 5000);
+      }
+    } else {
+      setErrors({ ...errors, email: 'Invalid Email' });
     }
   };
 

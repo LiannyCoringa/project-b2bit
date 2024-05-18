@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+  const navigate = useNavigate();
   const handleClick = () => {
     localStorage.removeItem('token');
-    window.location.href = '/';
+    navigate('/');
   };
   return (
     <header>

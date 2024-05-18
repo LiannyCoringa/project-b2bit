@@ -44,6 +44,7 @@ form input {
   border: none;
   padding: 20px;
   background-color: #f1f1f1;
+  color: black;
 }
 
 form label {
