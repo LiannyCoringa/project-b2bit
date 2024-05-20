@@ -1,3 +1,6 @@
+/// <reference types="cypress" />
+
+
 describe('template spec', () => {
   it('Testa se a mensagem "Required email" fica visível no inicio', () => {
     cy.visit('http://localhost:5173/')

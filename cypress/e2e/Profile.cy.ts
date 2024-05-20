@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('template spec', () => {
   it('Testas os elementos da página Profile', () => {
     cy.visit('http://localhost:5173/')
