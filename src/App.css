@@ -147,6 +147,7 @@ main {
   text-align: left;
   font-size: 14px;
   font-weight: lighter;
+  color: black;
 }
 
 .border-name:hover {
