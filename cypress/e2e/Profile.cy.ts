@@ -15,7 +15,7 @@ describe('template spec', () => {
     cy.get('input[placeholder="***************"]').type('password')
     cy.get('button').click()
     cy.contains('Logout').click()
-    cy.contains('Sing In').should('be.visible')
+    cy.contains('Sign In').should('be.visible')
   })
   it('Testa se ao apertar em Logout o token é removido do localStorage', () => {
     cy.visit('http://localhost:5173/')
@@ -27,7 +27,7 @@ describe('template spec', () => {
   })
   it('Testa se ao entrar diretamente na rota profile sem token é redirecionado para a página de Login', () => {
     cy.visit('http://localhost:5173/profile')
-    cy.contains('Sing In').should('be.visible')
+    cy.contains('Sign In').should('be.visible')
   })
   it('Testa se a API é chamada ao entrar na página Profile', () => {
     cy.visit('http://localhost:5173/')
@@ -37,8 +37,6 @@ describe('template spec', () => {
     cy.wait(2000)
     cy.intercept('GET', 'https://api.homologation.cliqdrive.com.br/auth/profile/').as('profile')
     cy.visit('http://localhost:5173/profile')
-    cy.wait('@profile').then((interception) => {
-      expect(interception.response.statusCode).to.eq(200)
-    })
+    cy.wait('@profile').its('response.statusCode').should('eq', 200)
   })
 })
