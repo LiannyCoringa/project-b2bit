@@ -25,7 +25,7 @@ describe('template spec', () => {
     cy.get('input[placeholder="***************"]').type('password')
     cy.get('button').click()
     cy.contains('Logout').click()
-    expect(localStorage.getItem('token')).to.be.null
+    cy.window().its('localStorage').invoke('getItem', 'token').should('be.null')
   })
   it('Testa se ao entrar diretamente na rota profile sem token é redirecionado para a página de Login', () => {
     cy.visit('http://localhost:5173/profile')

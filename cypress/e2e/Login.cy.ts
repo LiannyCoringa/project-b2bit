@@ -15,4 +15,11 @@ describe('template spec', () => {
     cy.get('button').click()
     cy.contains('Profile picture').should('be.visible')
   })
+  it('Testa se ao fazer o Login, cria um token no localStorage', () => {
+    cy.visit('http://localhost:5173/')
+    cy.get('input[placeholder="@gmail.com"]').type('cliente@youdrive.com')
+    cy.get('input[placeholder="***************"]').type('password')
+    cy.get('button').click()
+    cy.window().its('localStorage').invoke('getItem', 'token')
+  })
 })
