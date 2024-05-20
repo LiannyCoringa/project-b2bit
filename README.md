@@ -9,4 +9,4 @@ Para rodar a aplicação:
 * após a instalação das dependências terminar, rode o comando 'npm run dev'.
 * Deploy realizado no link: https://project-b2bit.vercel.app/
 
-Caso queira testar a aplicação, é possivel rodar os comandos 'npm run test'. 
+Caso queira testar a aplicação, é possivel rodar os comandos 'npm run cy:open'. 
