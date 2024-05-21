@@ -83,7 +83,6 @@ header button {
 
 main {
   background-color: #F1F5F9;
-  ;
 }
 
 .card {
@@ -131,23 +130,25 @@ main {
   width: 100%;
 }
 
-.info-profile p {
+.parag-title {
   font-size: 14px;
   margin-left: 30px;
   margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 .border-name {
   border: none;
   border-radius: 8px;
   background-color: #F4F4F4;
-  height: 44px;
-  width: 296px;
+  height: 30px;
+  width: 275px;
   margin-left: 30px;
   text-align: left;
   font-size: 14px;
   font-weight: lighter;
   color: black;
+  padding: 13px;
 }
 
 .border-name:hover {

@@ -37,21 +37,21 @@ function Profile() {
           <div className="image-profile">
             <span>Profile picture</span>
             <img
-              src={ profile?.avatar ? profile.avatar.image_low_url : 'https://cognuro-app-assets.s3.amazonaws.com/media/images/IMG_4452_low_5Vh2hYj.jpg' }
+              src={ profile?.avatar.low }
               alt="rosto de um usuário"
             />
           </div>
           <div className="info-profile">
-            <p>
+            <p className="parag-title">
               Your
               <span className="bold"> Name</span>
             </p>
-            <button className="border-name">{ profile && profile.name }</button>
-            <p>
+            <p className="border-name">{ profile && profile.name }</p>
+            <p className="parag-title">
               Your
               <span className="bold"> E-mail</span>
             </p>
-            <button className="border-name">{ profile && profile.email }</button>
+            <p className="border-name">{ profile && profile.email }</p>
           </div>
         </div>
       </main>
