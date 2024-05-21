@@ -2,9 +2,9 @@ export type ProfileType = {
   id: string;
   avatar: {
     id: number;
-    image_high_url: string;
-    image_medium_url: string;
-    image_low_url: string;
+    high: string;
+    medium: string;
+    low: string;
   },
   name: string;
   last_name: string;
